@@ -6,6 +6,7 @@
 [Oo]bj/
 [Bb]uild
 /[Ll]ibrary/
+*/metadata/*
 sysinfo.txt
 *.stackdump
  
