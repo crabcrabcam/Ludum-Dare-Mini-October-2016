@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 92c3507facb1843a2b684341ef84b134
-timeCreated: 1484248245
+timeCreated: 1484305616
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Character1
+    21300002: Character
+    21300004: Sword
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -28,7 +30,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -95,10 +97,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character1
+      name: Character
       rect:
         serializedVersion: 2
         x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sword
+      rect:
+        serializedVersion: 2
+        x: 128
         y: 0
         width: 128
         height: 128
