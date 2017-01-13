@@ -26,6 +26,7 @@ public class PlayerAttack : MonoBehaviour {
 		if (Input.GetButtonDown("Fire1"))
 		{
 			attacking = true;
+			stage = "toTop";
 		}
 	}
 
@@ -39,21 +40,31 @@ public class PlayerAttack : MonoBehaviour {
 
 	void TargetCheck(GameObject target)
 	{
-		print(target.name);
-		Debug.DrawLine(transform.position, target.transform.position);
-
-		//Returns true when the sword is over the target
-		//Performs a raycast from the sword towards the target and only checks for 0.1 distance. 
-		if (Physics.Raycast(transform.position, target.transform.position, 1)) 
+		//Checks the distance between 2 objects and returns true if they're closer than 0.1 (UnityUnits?)
+		if (Vector3.Distance(transform.position, target.transform.position) < 0.1f) 
 		{
-			print("True");
 			reachedTarget = true;
 		}
 		else 
 		{
 			reachedTarget = false;
-			print("False");
 		}
+
+//		print(target.name);
+//		Debug.DrawLine(transform.position, target.transform.position);
+//
+//		//Returns true when the sword is over the target
+//		//Performs a raycast from the sword towards the target and only checks for 0.1 distance. 
+//		if (Physics.Raycast(transform.position, target.transform.position, 1)) 
+//		{
+//			print("True");
+//			reachedTarget = true;
+//		}
+//		else 
+//		{
+//			reachedTarget = false;
+//			print("False");
+//		}
 	}
 
 	/// <summary>
@@ -66,7 +77,6 @@ public class PlayerAttack : MonoBehaviour {
 
 		//Enable hitbox
 		GetComponent<BoxCollider2D>().enabled = true;
-		stage = "toTop";
 		reachedTarget = false;
 		//Move to the top of the swing
 		if (stage == "toTop") 
@@ -76,15 +86,14 @@ public class PlayerAttack : MonoBehaviour {
 			if (!reachedTarget)
 			{
 				//Moves sword to destination
-				transform.position = Vector3.MoveTowards(transform.position, swordTop.transform.position, 0.01f);
+				transform.position = Vector3.MoveTowards(transform.position, swordTop.transform.position, 0.05f);
 			} else 
 			{
-				reachedTarget = false;
 				print("toBottom");
 				//Move to next stage
 				stage = "toBottom";
 				//Stops it from being at the target
-
+				reachedTarget = false;
 			}
 		}
 		//Move to bottom of swing
@@ -96,7 +105,7 @@ public class PlayerAttack : MonoBehaviour {
 			if (!reachedTarget) 
 			{
 				//Moves sword to destination
-				transform.position = Vector3.MoveTowards(transform.position, swordBottom.transform.position, 0.01f);
+				transform.position = Vector3.MoveTowards(transform.position, swordBottom.transform.position, 0.05f);
 			} else 
 			{
 				print("toStart");
@@ -114,7 +123,7 @@ public class PlayerAttack : MonoBehaviour {
 			if (!reachedTarget) 
 			{
 				//Moves sword to destination
-				transform.position = Vector3.MoveTowards(transform.position, swordHome.transform.position, 0.01f);
+				transform.position = Vector3.MoveTowards(transform.position, swordHome.transform.position, 0.05f);
 			} else 
 			{
 				print("Done");
