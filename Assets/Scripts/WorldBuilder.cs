@@ -45,7 +45,7 @@ public class WorldBuilder : MonoBehaviour {
                 //Get that object
                 GameObject newRoom = prefabObjects[newRoomIndex];
                 //Place it in the world in the correct position
-                Instantiate(newRoom, new Vector3(transform.position.x, transform.position.y + 12, transform.position.z), Quaternion.identity);
+                Instantiate(newRoom, new Vector3(transform.position.x - 8, transform.position.y - 5, transform.position.z), Quaternion.identity);
             }
             
         }
@@ -53,16 +53,34 @@ public class WorldBuilder : MonoBehaviour {
         {
             //Get list of open tops
             getList("Assets/Room Lists/top.txt");
+            //Make a random number from the list
+            int newRoomIndex = new System.Random().Next(0, prefabObjects.Count);
+            //Get that object
+            GameObject newRoom = prefabObjects[newRoomIndex];
+            //Place it in the world in the correct position
+            Instantiate(newRoom, new Vector3(transform.position.x - 8, transform.position.y + 15, transform.position.z), Quaternion.identity);
         }
         if (openSides.Contains("left"))
         {
             //Get list of open rights
             getList("Assets/Room Lists/right.txt");
+            //Make a random number from the list
+            int newRoomIndex = new System.Random().Next(0, prefabObjects.Count);
+            //Get that object
+            GameObject newRoom = prefabObjects[newRoomIndex];
+            //Place it in the world in the correct position
+            Instantiate(newRoom, new Vector3(transform.position.x + 8, transform.position.y + 5, transform.position.z), Quaternion.identity);
         }
         if (openSides.Contains("right"))
         {
             //Get list of open lefts
             getList("Assets/Room Lists/left.txt");
+            //Make a random number from the list
+            int newRoomIndex = new System.Random().Next(0, prefabObjects.Count);
+            //Get that object
+            GameObject newRoom = prefabObjects[newRoomIndex];
+            //Place it in the world in the correct position
+            Instantiate(newRoom, new Vector3(transform.position.x - 24, transform.position.y + 5, transform.position.z), Quaternion.identity);
         }
 	}
 
