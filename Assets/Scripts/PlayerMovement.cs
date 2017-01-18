@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject standingHitbox;
     public GameObject crouchingHitbox;
 
+    public bool standable;
+
     // Use this for initialization
     void Start()
     {
@@ -41,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         //As long as you use Time.deltaTime when dealing with Physics and movement
 		ForceMovement();
         GroundCheck();
+        HeadCheck();
     }
 
 	void ForceMovement() 
@@ -97,12 +100,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (GetComponent<Rigidbody2D>().velocity.x > 0)
             {
-                print("Forcing");
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(-0.5f, 0), mode: ForceMode2D.Impulse);
             }
             if (GetComponent<Rigidbody2D>().velocity.x < 0)
             {
-                print("Forcing");
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0.5f, 0), mode: ForceMode2D.Impulse);
             }
         }
@@ -113,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 		//Checks that the player is grounded
 		if (movey > 0.1 && grounded)
 		{
+            print("Jumping");
 			//Takes the velocity of the player along the x axis (horisontally) so that the player keeps being able to move in that direction independant of the jump.
 			//Adds a velocity equal to the jump height. 
 			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
@@ -120,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Crouch
         //NEED TO ADD A RAYCAST BEFORE POPING BECAUSE BUGS
-        if (movey < -0.1)
+        if (Input.GetButton("Crouch"))
         {
             if (grounded)
             {
@@ -140,9 +142,13 @@ public class PlayerMovement : MonoBehaviour
         } else
         {
             //Disable the crouched, enable the standing hitbox
-            standingHitbox.SetActive(true);
-            crouchingHitbox.SetActive(false);
-            GetComponent<SpriteRenderer>().sprite = standing;
+            if (standable)
+            {
+                standingHitbox.SetActive(true);
+                crouchingHitbox.SetActive(false);
+                GetComponent<SpriteRenderer>().sprite = standing;
+            }
+            
         }
 
 	}
@@ -154,5 +160,17 @@ public class PlayerMovement : MonoBehaviour
     void GroundCheck()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+    }
+
+    void HeadCheck()
+    {
+        if (Physics2D.Raycast(transform.position, transform.up, 0.5f))
+        {
+            standable = false;
+        }
+        else
+        {
+            standable = true;
+        }
     }
 }
