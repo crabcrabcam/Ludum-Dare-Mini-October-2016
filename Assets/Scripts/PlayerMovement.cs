@@ -164,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HeadCheck()
     {
-        if (Physics2D.Raycast(transform.position, transform.up, 0.5f, 2))
+        if (Physics2D.Raycast(transform.position, transform.up, 0.5f))
         {
             standable = false;
         }
