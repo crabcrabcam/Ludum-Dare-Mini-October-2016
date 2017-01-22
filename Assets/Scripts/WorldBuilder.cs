@@ -41,22 +41,22 @@ public class WorldBuilder : MonoBehaviour {
 	{
 
         if (openSides.Contains("up"))
-              {
-                  //Check bottom is clear
-                  //Returns true if something is there
-                  if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 8, transform.position.y + 15), 0.5f, -1))
-                  {
-                      //Get list of open bottoms
-                      getList("Assets/Room Lists/bottom.txt");
-                      //Make a random number from the list
-                      int newRoomIndex = random.Next(0, prefabObjects.Count);
-                      //Get that object
-                      GameObject newRoom = prefabObjects[newRoomIndex];
-                      //Place it in the world in the correct position
-                      Instantiate(newRoom, new Vector3(transform.position.x - 8, transform.position.y + 15, transform.position.z), Quaternion.identity);
-                  }
+        {
+            //Check bottom is clear
+            //Returns true if something is there
+            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 8, transform.position.y + 15), 0.5f, -1))
+            {
+                //Get list of open bottoms
+                getList("Assets/Room Lists/bottom.txt");
+                //Make a random number from the list
+                int newRoomIndex = random.Next(0, prefabObjects.Count);
+                //Get that object
+                GameObject newRoom = prefabObjects[newRoomIndex];
+                //Place it in the world in the correct position
+                Instantiate(newRoom, new Vector3(transform.position.x - 8, transform.position.y + 15, transform.position.z), Quaternion.identity);
+            }
+        }
 
-              }
         if (openSides.Contains("down"))
         {
             if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 8, transform.position.y - 5), 0.5f, -1))
@@ -74,7 +74,7 @@ public class WorldBuilder : MonoBehaviour {
         }
         if (openSides.Contains("left"))
         {
-            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x + 8, transform.position.y + 5), 0.5f, -1))
+            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 24, transform.position.y + 5), 0.5f, -1))
             {
                 //Get list of open rights
                 getList("Assets/Room Lists/right.txt");
@@ -83,13 +83,13 @@ public class WorldBuilder : MonoBehaviour {
                 //Get that object
                 GameObject newRoom = prefabObjects[newRoomIndex];
                 //Place it in the world in the correct position
-                Instantiate(newRoom, new Vector3(transform.position.x + 8, transform.position.y + 5, transform.position.z), Quaternion.identity);
+                Instantiate(newRoom, new Vector3(transform.position.x - 24, transform.position.y + 5, transform.position.z), Quaternion.identity);
             }
 
         }
         if (openSides.Contains("right"))
         {
-            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 24, transform.position.y - 5), 0.5f, -1))
+            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x + 8, transform.position.y + 5), 0.5f, -1))
             {
                 //Get list of open lefts
                 getList("Assets/Room Lists/left.txt");
@@ -98,7 +98,7 @@ public class WorldBuilder : MonoBehaviour {
                 //Get that object
                 GameObject newRoom = prefabObjects[newRoomIndex];
                 //Place it in the world in the correct position
-                Instantiate(newRoom, new Vector3(transform.position.x - 24, transform.position.y + 5, transform.position.z), Quaternion.identity);
+                Instantiate(newRoom, new Vector3(transform.position.x + 8, transform.position.y + 5, transform.position.z), Quaternion.identity);
             }
         }
     }
