@@ -1,0 +1,161 @@
+Initialize engine version: 5.6.0b4 (f8c731df0021)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 650 Ti BOOST (ID=0x11c2)
+    Vendor:   NVIDIA
+    VRAM:     2016 MB
+    Driver:   21.21.13.7563
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.TestRunner.dll (this message is harmless)
+Loading C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.TestRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\nunit.framework.dll (this message is harmless)
+Loading C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\nunit.framework.dll into Unity Child Domain
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.200 seconds
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Alpha 0.5_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3360x1089 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.365606 ms
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.686000 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 366.
+Total: 0.245073 ms (FindLiveObjects: 0.025142 ms CreateObjectMapping: 0.014526 ms MarkObjects: 0.197092 ms  DeleteObjects: 0.004260 ms)
+
+Player!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Assets/Room Lists/bottom.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Assets\Room Lists\bottom.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenText (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00000] in <filename unknown>:0 
+  at WorldBuilder.getList (System.String filePath) [0x00000] in <filename unknown>:0 
+  at WorldBuilder.makeLevels () [0x00000] in <filename unknown>:0 
+  at WorldBuilder.OnTriggerEnter2D (UnityEngine.Collider2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Assets/Room Lists/bottom.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Assets\Room Lists\bottom.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenText (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00000] in <filename unknown>:0 
+  at WorldBuilder.getList (System.String filePath) [0x00000] in <filename unknown>:0 
+  at WorldBuilder.makeLevels () [0x00000] in <filename unknown>:0 
+  at WorldBuilder.OnTriggerEnter2D (UnityEngine.Collider2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumping
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Assets/Room Lists/bottom.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Cameron Reid\Documents\GitHub\RougeLike-Platformer\Builds\Alpha 0.5\Assets\Room Lists\bottom.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenText (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00000] in <filename unknown>:0 
+  at WorldBuilder.getList (System.String filePath) [0x00000] in <filename unknown>:0 
+  at WorldBuilder.makeLevels () [0x00000] in <filename unknown>:0 
+  at WorldBuilder.OnTriggerEnter2D (UnityEngine.Collider2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 3e00 -> priority: 1 
