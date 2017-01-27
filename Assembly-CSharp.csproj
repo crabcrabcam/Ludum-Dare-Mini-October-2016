@@ -61,6 +61,7 @@
      <Compile Include="Assets\UI\Menu\MenuScript.cs" />
      <Compile Include="Assets\UI\Pause Screen\PauseMenu.cs" />
      <None Include="Assets\Room Lists\left.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\RightLeft.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />

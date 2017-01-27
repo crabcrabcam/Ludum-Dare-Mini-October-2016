@@ -31,7 +31,7 @@ public class WorldBuilder : MonoBehaviour {
 		{
             print("Player!");
             makeLevels();
-//            Destroy(this);
+            Destroy(this);
 		}
 	}
 
