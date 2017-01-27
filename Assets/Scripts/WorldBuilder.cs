@@ -48,7 +48,7 @@ public class WorldBuilder : MonoBehaviour {
             if (!Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y + 10), 0.5f, -1))
             {
                 //Get list of open bottoms
-                getList("Assets/Room Lists/bottom.txt");
+                getList("bottom");
                 //Make a random number from the list
                 int newRoomIndex = random.Next(0, prefabObjects.Count);
                 //Get that object
@@ -65,7 +65,7 @@ public class WorldBuilder : MonoBehaviour {
             if (!Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 10), 0.5f, -1))
             {
                 //Get list of open tops
-                getList("Assets/Room Lists/top.txt");
+                getList("top");
                 //Make a random number from the list
                 int newRoomIndex = random.Next(0, prefabObjects.Count);
                 //Get that object
@@ -81,7 +81,7 @@ public class WorldBuilder : MonoBehaviour {
             if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 16, transform.position.y), 0.5f, -1))
             {
                 //Get list of open rights
-                getList("Assets/Room Lists/right.txt");
+                getList("right");
                 //Make a random number from the list
                 int newRoomIndex = random.Next(0, prefabObjects.Count);
                 //Get that object
@@ -97,7 +97,7 @@ public class WorldBuilder : MonoBehaviour {
             if (!Physics2D.OverlapCircle(new Vector2(transform.position.x + 16, transform.position.y), 0.5f, -1))
             {
                 //Get list of open lefts
-                getList("Assets/Room Lists/left.txt");
+                getList("left");
                 //Make a random number from the list
                 int newRoomIndex = random.Next(0, prefabObjects.Count);
                 //Get that object
@@ -111,12 +111,17 @@ public class WorldBuilder : MonoBehaviour {
 
     void getList(string filePath)
     {
-        print(filePath);
         prefabObjects.Clear();
-        var prefabs = File.ReadAllLines(filePath);
+		//Read all the lines from the file. File loaded from resources
+
+		print((Resources.Load(filePath, typeof(TextAsset)) as TextAsset).text);
+
+		List<string> prefabs = new List<string>((Resources.Load(filePath, typeof(TextAsset)) as TextAsset).text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None));
+
         foreach (var prefab in prefabs)
         {
             print(prefab);
+			print(prefabs.Count);
             GameObject newPrefab = Resources.Load(prefab, typeof(GameObject)) as GameObject;
             prefabObjects.Add(newPrefab);
         }
