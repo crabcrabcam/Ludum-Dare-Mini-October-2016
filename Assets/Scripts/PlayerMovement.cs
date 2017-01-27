@@ -52,8 +52,6 @@ public class PlayerMovement : MonoBehaviour
 		movex = Input.GetAxisRaw("Horizontal");
 		movey = Input.GetAxisRaw("Vertical");
 
-//		print(movex);
-
 		//Left and right
 		//Moves instantly
 		if (movex > 0.1)
@@ -114,7 +112,6 @@ public class PlayerMovement : MonoBehaviour
 		//Checks that the player is grounded
 		if (movey > 0.1 && grounded)
 		{
-            print("Jumping");
 			//Takes the velocity of the player along the x axis (horisontally) so that the player keeps being able to move in that direction independant of the jump.
 			//Adds a velocity equal to the jump height. 
 			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);

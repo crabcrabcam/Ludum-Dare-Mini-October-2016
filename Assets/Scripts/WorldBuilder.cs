@@ -31,7 +31,7 @@ public class WorldBuilder : MonoBehaviour {
 		{
             print("Player!");
             makeLevels();
-            Destroy(this);
+//            Destroy(this);
 		}
 	}
 
@@ -44,7 +44,8 @@ public class WorldBuilder : MonoBehaviour {
         {
             //Check bottom is clear
             //Returns true if something is there
-            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 8, transform.position.y + 15), 0.5f, -1))
+			Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y + 10), Color.white, 50);
+            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y + 10), 0.5f, -1))
             {
                 //Get list of open bottoms
                 getList("Assets/Room Lists/bottom.txt");
@@ -59,7 +60,9 @@ public class WorldBuilder : MonoBehaviour {
 
         if (openSides.Contains("down"))
         {
-            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 8, transform.position.y - 5), 0.5f, -1))
+			print("Contains down");
+			Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y - 10), Color.white, 50);
+            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 10), 0.5f, -1))
             {
                 //Get list of open tops
                 getList("Assets/Room Lists/top.txt");
@@ -74,7 +77,8 @@ public class WorldBuilder : MonoBehaviour {
         }
         if (openSides.Contains("left"))
         {
-            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 24, transform.position.y + 5), 0.5f, -1))
+			Debug.DrawLine(transform.position, new Vector2(transform.position.x - 16, transform.position.y), Color.white, 50);
+            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x - 16, transform.position.y), 0.5f, -1))
             {
                 //Get list of open rights
                 getList("Assets/Room Lists/right.txt");
@@ -89,7 +93,8 @@ public class WorldBuilder : MonoBehaviour {
         }
         if (openSides.Contains("right"))
         {
-            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x + 8, transform.position.y + 5), 0.5f, -1))
+			Debug.DrawLine(transform.position, new Vector2(transform.position.x + 16, transform.position.y), Color.white, 50);
+            if (!Physics2D.OverlapCircle(new Vector2(transform.position.x + 16, transform.position.y), 0.5f, -1))
             {
                 //Get list of open lefts
                 getList("Assets/Room Lists/left.txt");
