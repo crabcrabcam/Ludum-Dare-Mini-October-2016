@@ -1,2 +1,4 @@
 UpRightDown
 UpDownLeft
+UpRightDownLeft
+UpDownLeft1

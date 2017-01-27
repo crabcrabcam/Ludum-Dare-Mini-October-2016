@@ -64,6 +64,7 @@
      <None Include="Assets\Tiled2Unity\Imported\RightLeft.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\UpRightDownLeft.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
      <None Include="Assets\Room Lists\Resources\right.txt" />
      <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
@@ -76,6 +77,7 @@
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
      <None Include="Assets\Room Lists\Resources\bottom.txt" />
      <None Include="Assets\Tiled2Unity\Imported\SizeTest.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\UpDownLeft1.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\Room.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\LeftRightBottom.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\Test Level.tiled2unity.xml" />
