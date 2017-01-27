@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject crouchingHitbox;
 
     public bool standable;
+	public bool crouching;
 
     // Use this for initialization
     void Start()
@@ -73,15 +74,30 @@ public class PlayerMovement : MonoBehaviour
 
         //Setting the max speed (velocity)
 		float maxVelocity;
-		if (!grounded) 
+		if (crouching)
 		{
-			//Air max speed
-			maxVelocity = 5;
-		} else 
-		{
-			//Ground max speed
-			maxVelocity = 4;
+			if (grounded)
+			{
+				maxVelocity = 4;
+			}
+			else
+			{
+				maxVelocity = 5;
+			}
 		}
+		else 
+		{
+			if (grounded) 
+			{
+				maxVelocity = 6;
+			}
+			else 
+			{
+				maxVelocity = 8;
+			}
+		}
+
+		print(maxVelocity);
 
 		if (GetComponent<Rigidbody2D>().velocity.x > maxVelocity) 
 		{
@@ -121,14 +137,9 @@ public class PlayerMovement : MonoBehaviour
         //NEED TO ADD A RAYCAST BEFORE POPING BECAUSE BUGS
         if (Input.GetButton("Crouch"))
         {
-            if (grounded)
-            {
-                maxVelocity = 2;
-            }
-            else
-            {
-                maxVelocity = 2.5f;
-            }
+            
+			crouching = true;
+
             //Animate the player to the crouch
             GetComponent<SpriteRenderer>().sprite = crouched;
 
@@ -141,6 +152,7 @@ public class PlayerMovement : MonoBehaviour
             //Disable the crouched, enable the standing hitbox
             if (standable)
             {
+				crouching = false;
                 standingHitbox.SetActive(true);
                 crouchingHitbox.SetActive(false);
                 GetComponent<SpriteRenderer>().sprite = standing;
