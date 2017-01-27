@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="DrawnTiles" tilewidth="512" tileheight="512" tilecount="24" columns="8">
- <image source="../../../../RougeLike-Platformer/Assets/Art/DrawnBlockSheet.png" width="4096" height="1536"/>
+ <image source="../../Art/DrawnBlockSheet.png" width="4096" height="1536"/>
  <tile id="0">
   <objectgroup draworder="index">
    <object id="1" x="19" y="93" width="496" height="420"/>
