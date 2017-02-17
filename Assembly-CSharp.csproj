@@ -61,12 +61,14 @@
      <Compile Include="Assets\UI\Menu\MenuScript.cs" />
      <Compile Include="Assets\UI\Pause Screen\PauseMenu.cs" />
      <None Include="Assets\Room Lists\Resources\left.txt" />
+     <None Include="Assets\AnimationImporter\readme.txt" />
      <None Include="Assets\Tiled2Unity\Imported\RightLeft.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\UpRightDownLeft.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
      <None Include="Assets\Room Lists\Resources\right.txt" />
+     <None Include="Assets\AnimationImporter\Editor\PyxelEdit\Ionic.Zip.dll-readme.txt" />
      <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
